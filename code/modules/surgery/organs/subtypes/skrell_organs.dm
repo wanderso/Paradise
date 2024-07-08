@@ -85,6 +85,10 @@
 		held_item.hear_message(M, msg)
 	..()
 
+/obj/item/organ/internal/headpocket/proc/get_contents() // Mostly copied from storage implant's code to attempt to get items in Skrell headpockets to greentext steal objectives
+	if(held_item)
+		return held_item
+
 /obj/item/organ/internal/heart/skrell
 	name = "skrell heart"
 	desc = "A stream lined heart."
