@@ -172,3 +172,63 @@
 	desc = "Integrated encryption key"
 	icon_state = "cap_cypherkey"
 	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "AI Private" = 1, "Procedure" = 1)
+
+/obj/item/encryptionkey/team/red
+	name = "Red Team Encryption Key"
+	desc = "An encryption key for a radio headset. Contains the cypherkeys for the red team."
+	icon_state = "sec_cypherkey"
+	channels = list("Red" = 1)
+
+/obj/item/encryptionkey/team/blue
+	name = "Blue Team Encryption Key"
+	desc = "An encryption key for a radio headset. Contains the cypherkeys for the blue team."
+	icon_state = "med_cypherkey"
+	channels = list("Blue" = 1)
+
+/obj/item/encryptionkey/team/green
+	name = "Green Team Encryption Key"
+	desc = "An encryption key for a radio headset. Contains the cypherkeys for the green team."
+	icon_state = "srv_cypherkey"
+	channels = list("Green" = 1)
+
+/obj/item/encryptionkey/team/yellow
+	name = "Yellow Team Encryption Key"
+	desc = "An encryption key for a radio headset. Contains the cypherkeys for the yellow team."
+	icon_state = "eng_cypherkey"
+	channels = list("Yellow" = 1)
+
+/obj/item/encryptionkey/team/disguised
+	change_voice = TRUE
+	var/fake_name = "Agent ALERT_A_CODER"
+	var/static/list/fakename_list
+
+/obj/item/encryptionkey/team/disguised/Initialize()
+	if(!LAZYLEN(fakename_list))
+		fakename_list = GLOB.html_colors.Copy()
+	. = ..()
+	if(change_voice)
+		fake_name = "Agent [pick_n_take(fakename_list)]"
+
+/obj/item/encryptionkey/team/disguised/red
+	name = "Red Team Anonymized Encryption Key"
+	desc = "An encryption key for a radio headset. Contains the cypherkeys for the red team. Anonymizes the person speaking on this frequency."
+	icon_state = "sec_cypherkey"
+	channels = list("Red" = 1)
+
+/obj/item/encryptionkey/team/disguised/blue
+	name = "Blue Team Anonymized Encryption Key"
+	desc = "An encryption key for a radio headset. Contains the cypherkeys for the blue team. Anonymizes the person speaking on this frequency."
+	icon_state = "med_cypherkey"
+	channels = list("Blue" = 1)
+
+/obj/item/encryptionkey/team/disguised/green
+	name = "Green Team Anonymized Encryption Key"
+	desc = "An encryption key for a radio headset. Contains the cypherkeys for the green team. Anonymizes the person speaking on this frequency."
+	icon_state = "srv_cypherkey"
+	channels = list("Green" = 1)
+
+/obj/item/encryptionkey/team/disguised/yellow
+	name = "Yellow Team Anonymized Encryption Key"
+	desc = "An encryption key for a radio headset. Contains the cypherkeys for the yellow team. Anonymizes the person speaking on this frequency."
+	icon_state = "eng_cypherkey"
+	channels = list("Yellow" = 1)

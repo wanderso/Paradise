@@ -34,7 +34,13 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	":$" = "Response Team", "#$" = "Response Team", ".$" = "Response Team",
 	":-" = "Special Ops",	"#-" = "Special Ops",	".-" = "Special Ops",
 	":_" = "SyndTeam",	"#_" = "SyndTeam",		"._" = "SyndTeam",
-	":~" = "cords",		"#~" = "cords",			".~" = "cords"
+	":~" = "cords",		"#~" = "cords",			".~" = "cords",
+	":1" = "Red",		"#1" = "Red",			".1" = "Red",
+	":2" = "Blue",		"#2" = "Blue",			".2" = "Blue",
+	":3" = "Green",		"#3" = "Green",			".3" = "Green",
+	":4" = "Yellow",	"#4" = "Yellow",		".4" = "Yellow"
+
+
 ))
 
 GLOBAL_LIST_EMPTY(channel_to_radio_key)
